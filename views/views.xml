@@ -1,0 +1,21 @@
+<odoo>
+  <data>
+    <!-- Repair Order -->
+    <record id="method_accesorios_bandera.view_repair_order_form" model="ir.ui.view">
+      <field name="name">method_accesorios_bandera.view_repair_order_form</field>
+      <field name="model">repair.order</field>
+      <field name="inherit_id" ref="repair.view_repair_order_form"/>
+      <field name="arch" type="xml">
+        <xpath expr="//field[@name='address_id']" position="after">
+          <field name="user_id"/>
+        </xpath>        
+        <xpath expr="//field[@name='pricelist_id']" position="after">
+          <field name="patente"/>
+          <field name="nro_boleta"/>
+        </xpath>        
+
+      </field>
+    </record>
+      
+  </data>
+</odoo>
